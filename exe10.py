@@ -6,3 +6,4 @@ if salario >1250:
 else:
     aumento = salario * 0.15
     print("o aumento salarial foi de:", aumento, "reais. 10%")
+    print("joão henrique")
