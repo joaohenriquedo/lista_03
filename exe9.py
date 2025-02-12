@@ -1,8 +1,18 @@
-#Escreva um programa que pergunte o salário do funcionário e calcule o valor do aumento. Para salários superiores a R$ 1.250,00, calcule um aumento de 10%. Para os inferiores ou iguais, de 15%.
-salario = int(input("insira o seu salario:"))
-if salario <1250:
-    aumento = salario * 0.15
-    print("o aumento salarial foi de:", aumento, "reais")
+#Escreva um programa que faça o cálculo do imposto de renda 2025. Consulte a tabela no site da Receita federal.
+renda = int (input("digite sua renda anual: R$ "))
+imposto = 0
+if renda <= 22847.76:
+    imposto = 0
+elif renda <= 33919.80:
+    imposto = (renda - 22847.76) * 0.075
+elif renda <= 45012.60:
+    imposto = (renda - 33919.80) * 0.15 + 826.15
+elif renda <= 55976.16:
+    imposto = (renda - 45012.60) * 0.225 + 1427.57
 else:
-    aumento = salario * 0.10
-    print("o aumento salarial foi de:", aumento, "reais")
+    imposto = (renda - 55976.16) * 0.275 + 2117.02
+if imposto > 0:
+    print("voce deve pagar: de Imposto de Renda.")
+else:
+    print("voce está isento de pagar Imposto de Renda.")
+    print("joão henrique")
